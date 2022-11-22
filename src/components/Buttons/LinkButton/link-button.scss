@@ -1,0 +1,28 @@
+@import '../../../styles/vars.scss';
+
+.green__btn {
+  @include flex(center, center, nowrap);
+  @include button($white, $green-btn, 4px);
+  @include text(14px, $lh-standart, 700);
+  transition: all 0.3s ease;
+  min-width: 180px;
+  padding: 15px 20px;
+  &:hover {
+    transition: all 0.3s ease;
+    @include button($white, $green-dark, 4px);
+  }
+}
+
+.blue__btn {
+  @include flex(center, center, nowrap);
+  @include button($blue-sky, $transparent, 4px);
+  outline: 1px solid $blue-sky;
+  @include text(14px, $lh-standart, 700);
+  min-width: 180px;
+  padding: 15px 20px;
+  transition: all 0.3s ease;
+  &:hover {
+    @include button($gray1-bgc, $blue-sky, 4px);
+    transition: all 0.3s ease-in-out;
+  }
+}

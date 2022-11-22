@@ -1,0 +1,19 @@
+@import '../../styles/vars.scss';
+
+.home__title {
+  @include text(40px, 125%, 400);
+  color: $gray-title;
+  @media screen and (max-width: 768px) {
+    @include text(30px, 125%, 400);
+    text-align: center;
+  }
+}
+
+.form__title {
+  @include text(24px, 140%, 700);
+  color: $gray-title;
+  margin-bottom: 25px;
+  @media screen and (max-width: 768px) {
+    @include text(18px, 160%, 700);
+  }
+}

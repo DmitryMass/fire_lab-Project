@@ -1,0 +1,27 @@
+@import '../../../styles/vars.scss';
+
+.form {
+  max-width: 330px;
+  width: 100%;
+  padding: 32px;
+  background-color: $gray3-bars;
+  border: 1px solid $gray4-divider;
+  z-index: 5;
+}
+
+.inputs__wrapper {
+  @include flex(stretch, flex-start, nowrap);
+  flex-direction: column;
+}
+.form__input {
+  @include text(16px, 19px, 400);
+  background-color: $gray1-bgc;
+  border-radius: 5px;
+  padding: 20px;
+  border: none;
+  margin-bottom: 25px;
+  color: $gray-title;
+  &::placeholder {
+    color: $gray-text-ap;
+  }
+}

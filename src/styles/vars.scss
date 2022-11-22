@@ -1,0 +1,58 @@
+// Colors
+$green-dark: #015f43;
+$green: #015f43;
+$green-light: #00b37e;
+$blue-sky: #81d8f7;
+$warning: #fba94c;
+$red-error: #f75a68;
+$green-jn: #00b37e;
+$green-btn: #00875f;
+$transparent: transparent;
+
+$gray1-bgc: #09090a;
+$gray2-elem: #121214;
+$gray3-bars: #121214;
+$gray4-divider: #323238;
+
+$gray-title: #e1e1e6;
+$gray-text: #c4c4cc;
+$gray-text-ap: #8d8d99;
+$white: #ffffff;
+
+//
+$lh-sm: 125%;
+$lh-min: 140%;
+$lh-standart: 160%;
+// fonts
+$sm: 12px;
+$sm-md: 14px;
+$md: 16px;
+$md-lg: 18px;
+$lg: 24px;
+$lg-est: 40px;
+
+@mixin container($width, $p) {
+  max-width: $width;
+  padding: 0 $p;
+  margin: 0 auto;
+  box-sizing: content-box;
+}
+@mixin flex($ai, $jc, $wrap) {
+  display: flex;
+  justify-content: $jc;
+  flex-wrap: $wrap;
+  align-items: $ai;
+}
+
+@mixin button($color, $background, $border) {
+  border-radius: $border;
+  color: $color;
+  background-color: $background;
+  border: none;
+}
+
+@mixin text($fs, $lh, $fw) {
+  font-size: $fs;
+  line-height: $lh;
+  font-weight: $fw;
+}

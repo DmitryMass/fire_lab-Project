@@ -1,0 +1,67 @@
+@import '../../styles/vars.scss';
+
+.home {
+  position: relative;
+  padding-top: 80px;
+  min-height: 100vh;
+  background-image: url('../../assets/images/blur.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  @media screen and (max-width: 768px) {
+    padding-top: 40px;
+  }
+}
+.home__header {
+  @include flex(center, space-between, nowrap);
+  gap: 40px;
+  @media screen and (max-width: 768px) {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+.home__react {
+  position: absolute;
+  top: 0;
+  @include flex(center, center, nowrap);
+  width: 100%;
+  & > object {
+    max-width: 100%;
+  }
+}
+
+.home__pictures {
+  position: relative;
+  width: 100%;
+  margin-top: 50px;
+  & > object {
+    max-width: 100%;
+  }
+  @media screen and (max-width: 576px) {
+    margin-top: 20px;
+  }
+}
+
+.container {
+  @include container(1215px, 15px);
+  @media screen and (max-width: 768px) {
+    max-width: 576px;
+  }
+}
+
+.home__info {
+  max-width: 625px;
+}
+
+.home__span {
+  color: $blue-sky;
+}
+
+.home__subtitle {
+  @include text(16px, 160%, 400);
+  color: $gray-text;
+  margin-top: 20px;
+  @media screen and (max-width: 768px) {
+    @include text(14px, 160%, 400);
+    text-align: center;
+  }
+}

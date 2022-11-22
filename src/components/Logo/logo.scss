@@ -1,0 +1,28 @@
+@import '../../styles/vars.scss';
+
+.logo__home {
+  @include flex(center, flex-start, nowrap);
+  margin-bottom: 32px;
+  & > span:first-child {
+    @include text(24px, 160%, bold);
+    color: $white;
+    @include flex(center, center, nowrap);
+    position: relative;
+    padding-right: 9px;
+
+    &:after {
+      content: '';
+      position: absolute;
+      height: 65%;
+      width: 5px;
+      right: 0;
+      background-color: $green-jn;
+    }
+  }
+  & > span:last-child {
+    @include text(14px, 160%, 500);
+    color: $gray-text;
+    text-transform: uppercase;
+    padding-left: 5px;
+  }
+}

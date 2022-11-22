@@ -1,0 +1,33 @@
+@import '../../../styles/vars.scss';
+
+.footer {
+  min-height: 75px;
+  background-color: $gray1-bgc;
+  @include flex(center, center, nowrap);
+  @media screen and (max-width: 576px) {
+    padding: 15px 0;
+  }
+}
+
+.footer__container {
+  @include container(1315px, 15px);
+  width: 100%;
+  @include flex(center, space-between, nowrap);
+  @media screen and (max-width: 576px) {
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+
+.footer__logo {
+  @include flex(center, center, nowrap);
+  gap: 25px;
+  @media screen and (max-width: 576px) {
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+.footer__rights {
+  @include text(14px, 160%, 400);
+  color: $gray-text-ap;
+}
