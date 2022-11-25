@@ -4,6 +4,7 @@
   @include flex(center, center, nowrap);
   @include button($white, $green-btn, 4px);
   @include text(14px, $lh-standart, 700);
+  gap: 10px;
   transition: all 0.3s ease;
   min-width: 180px;
   padding: 15px 20px;
@@ -18,6 +19,7 @@
   @include button($blue-sky, $transparent, 4px);
   outline: 1px solid $blue-sky;
   @include text(14px, $lh-standart, 700);
+  gap: 10px;
   min-width: 180px;
   padding: 15px 20px;
   transition: all 0.3s ease;

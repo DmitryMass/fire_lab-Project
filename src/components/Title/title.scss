@@ -17,3 +17,11 @@
     @include text(18px, 160%, 700);
   }
 }
+
+.schedule__title {
+  @include text(24px, 140%, 700);
+  color: $white;
+  padding-bottom: 10px;
+  border-bottom: 1px solid $gray4-divider;
+  width: 100%;
+}

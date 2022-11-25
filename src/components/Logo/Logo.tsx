@@ -6,11 +6,12 @@ import './logo.scss';
 type LogoType = {
   path: string;
   modificator: string;
+  handleClick?: () => void;
 };
 
-const Logo: FC<LogoType> = ({ path, modificator }) => {
+const Logo: FC<LogoType> = ({ path, modificator, handleClick }) => {
   return (
-    <Link className={modificator} to={path}>
+    <Link className={modificator} to={path} onClick={handleClick}>
       <span>fire lab</span> <span>reactjs</span>
     </Link>
   );

@@ -1,5 +1,7 @@
 import React, { FC } from 'react';
 
+import './video-box.scss';
+
 const VideoBox: FC = () => {
   return (
     <div className='video-wrapper'>
@@ -7,7 +9,7 @@ const VideoBox: FC = () => {
         <iframe
           width='100%'
           height='100%'
-          src='https://www.youtube.com/embed/LSRNmhLS76o'
+          src='https://www.youtube.com/embed/j942wKiXFu8'
           title='YouTube video'
           allowFullScreen
           frameBorder={0}

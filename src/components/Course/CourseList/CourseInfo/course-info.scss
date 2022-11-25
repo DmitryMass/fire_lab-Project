@@ -1,0 +1,39 @@
+@import '../../../../styles/vars.scss';
+
+.info {
+  @include container(1015px, 15px);
+  margin: 30px 0 0 0;
+}
+
+.info__item {
+  @include flex(center, space-between, nowrap);
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+.item__wrapper {
+  max-width: 730px;
+  margin-bottom: 25px;
+}
+
+.item__title {
+  @include text(24px, 140%, bold);
+  color: $gray-title;
+  margin-bottom: 15px;
+  @media screen and (max-width: 992px) {
+    @include text(18px, 160%, bold);
+  }
+}
+.item__description {
+  @include text(16px, 160%, 400);
+  color: $gray-text;
+  @media screen and (max-width: 992px) {
+    @include text(14px, 160%, bold);
+  }
+}
+
+.item__btns {
+  @include flex(center, center, nowrap);
+  flex-direction: column;
+  gap: 15px;
+}

@@ -26,3 +26,22 @@
     padding-left: 5px;
   }
 }
+
+.logo__course {
+  text-align: center;
+  margin-bottom: 0;
+  width: 100%;
+  justify-content: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: $gray3-bars;
+  border-bottom: 1px solid $gray4-divider;
+  min-height: 52px;
+  & > span:first-child {
+    @include text(32px, 160%, bold);
+
+    & > span:last-child {
+      @include text(18px, 160%, 500);
+    }
+  }
+}

@@ -1,17 +1,40 @@
 import React, { FC } from 'react';
+import { useDispatch } from 'react-redux';
+
 import { Formik, Field } from 'formik';
 
 import Title from '../../Title/Title';
 import ButtonComp from '../../Buttons/Button/ButtonComp';
 import './home-form.scss';
+import { useNavigate } from 'react-router-dom';
+import useActions from '../../../store/hooks/actions';
+
+type HomeFormType = {
+  name: string;
+  email: string;
+};
 
 const HomeForm: FC = () => {
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const { addUser } = useActions();
+  const handleSubmit = async (values: HomeFormType, { resetForm }: any) => {
+    try {
+      localStorage.setItem('user', values.name);
+      dispatch(addUser(localStorage.user));
+    } catch (e) {
+      console.log(e);
+    }
+    navigate('/course');
+    resetForm();
+  };
+
   return (
     <div className='form'>
       <Title modificator='form__title'>Sign up for free</Title>
       <Formik
         initialValues={{ name: '', email: '' }}
-        onSubmit={() => {}}
+        onSubmit={handleSubmit}
         validationSchema={''}
       >
         {({ handleSubmit, handleChange, handleBlur, values, errors }) => (
