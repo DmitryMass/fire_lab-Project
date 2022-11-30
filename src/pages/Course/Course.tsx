@@ -23,11 +23,14 @@ const Course: FC = () => {
 
   return (
     <div className='course'>
-      <Logo
-        modificator='logo__home logo__course'
-        path='/course'
-        handleClick={handleClick}
-      />
+      <header className='course__header'>
+        <Logo
+          modificator='logo__home logo__course'
+          path='/course'
+          handleClick={handleClick}
+        />
+        <span className='header__schedule'>Schedule</span>
+      </header>
       <CourseList />
     </div>
   );

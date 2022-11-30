@@ -149,15 +149,32 @@
 
 .menuIcon {
   display: none !important;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 900px) {
     display: block !important;
     position: absolute;
-    top: 15px;
+    top: 22px;
     right: 15px;
     color: $white;
   }
 }
 
 .active {
-  transform: translateX(100%);
+  display: block;
+  position: absolute;
+  top: 73px;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 75px);
+  display: flex;
+  justify-content: center;
+  background-color: rgba(0, 114, 36, 0.399);
+  & > ul {
+    width: 320px;
+  }
+}
+.non__active {
+  @media screen and (max-width: 900px) {
+    display: none;
+  }
 }

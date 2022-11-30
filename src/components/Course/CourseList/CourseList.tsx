@@ -87,6 +87,10 @@ const CourseList: FC = () => {
     setActive((prev) => !prev);
   }, []);
 
+  const handleFalseClick = useCallback(() => {
+    setActive(false);
+  }, []);
+
   return (
     <>
       <Tabs>
@@ -94,7 +98,7 @@ const CourseList: FC = () => {
           <Grid item md={8} lg={9}>
             {arr.map((item) => (
               <TabPanel key={item.id}>
-                {/* <VideoBox /> */}
+                <VideoBox />
                 <Accordion>
                   <AccordionSummary
                     expandIcon={<ExpandMoreIcon className='course__icon' />}
@@ -116,13 +120,13 @@ const CourseList: FC = () => {
             <div onClick={handleClick} className='menuIcon'>
               <MenuIcon />
             </div>
-            <div className={active ? 'active' : ''}>
+            <div className={active ? 'active' : 'non__active'}>
               <TabList>
                 <div className='schedule__wrapper'>
                   <Title modificator='schedule__title'>Schedule</Title>
                 </div>
                 {arr.map((item) => (
-                  <Tab key={item.id}>
+                  <Tab key={item.id} onClick={handleFalseClick}>
                     <div className='course__content'>
                       <div className='content__wrapper'>
                         <TaskAltIcon

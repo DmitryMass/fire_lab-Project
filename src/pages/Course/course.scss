@@ -3,3 +3,25 @@
 .course__wrapper {
   display: flex;
 }
+
+.course__header {
+  padding: 10px;
+  @include flex(center, center, nowrap);
+  margin-bottom: 0;
+  background-color: #121214;
+  border-bottom: 1px solid #323238;
+  min-height: 52px;
+  @media screen and (max-width: 900px) {
+    justify-content: space-between;
+  }
+}
+
+.header__schedule {
+  @include text(16px, 160%, 500);
+  color: $white;
+  margin-right: 40px;
+  display: none;
+  @media screen and (max-width: 900px) {
+    display: block;
+  }
+}

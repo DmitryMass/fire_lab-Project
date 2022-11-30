@@ -30,13 +30,7 @@
 .logo__course {
   text-align: center;
   margin-bottom: 0;
-  width: 100%;
-  justify-content: center;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  background-color: $gray3-bars;
-  border-bottom: 1px solid $gray4-divider;
-  min-height: 52px;
+  padding: 0;
   & > span:first-child {
     @include text(32px, 160%, bold);
 
