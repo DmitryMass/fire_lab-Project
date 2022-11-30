@@ -11,7 +11,7 @@
   background-color: #121214;
   border-bottom: 1px solid #323238;
   min-height: 52px;
-  @media screen and (max-width: 900px) {
+  @media screen and (max-width: 899px) {
     justify-content: space-between;
   }
 }
@@ -21,7 +21,7 @@
   color: $white;
   margin-right: 40px;
   display: none;
-  @media screen and (max-width: 900px) {
+  @media screen and (max-width: 899px) {
     display: block;
   }
 }

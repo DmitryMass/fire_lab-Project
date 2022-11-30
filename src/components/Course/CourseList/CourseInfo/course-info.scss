@@ -33,11 +33,18 @@
   }
 }
 
-.item__btns {
-  max-width: 250px;
-  max-height: 250px;
-}
-
 .founder {
   margin-top: 20px;
+}
+
+//  media
+@media screen and (max-width: 576px) {
+  .info__item {
+    flex-direction: column;
+  }
+  .item__btns {
+    width: 100%;
+    @include flex(stretch, center, nowrap);
+    flex-direction: column;
+  }
 }

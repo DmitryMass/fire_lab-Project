@@ -6,8 +6,8 @@
   @include text(14px, $lh-standart, 700);
   gap: 10px;
   transition: all 0.3s ease;
-  width: 180px;
   max-height: 40px;
+  min-width: 180px;
   padding: 15px 20px;
   margin-bottom: 15px;
   &:hover {

@@ -134,6 +134,9 @@
 
 // accordion
 .MuiAccordion-root {
+  @media screen and (max-width: 576px) {
+    width: 100% !important;
+  }
   margin-top: 20px;
 }
 
@@ -149,7 +152,7 @@
 
 .menuIcon {
   display: none !important;
-  @media screen and (max-width: 900px) {
+  @media screen and (max-width: 899px) {
     display: block !important;
     position: absolute;
     top: 22px;
@@ -174,7 +177,7 @@
   }
 }
 .non__active {
-  @media screen and (max-width: 900px) {
+  @media screen and (max-width: 899px) {
     display: none;
   }
 }

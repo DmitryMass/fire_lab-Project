@@ -95,7 +95,7 @@ const CourseList: FC = () => {
     <>
       <Tabs>
         <Grid container spacing={2}>
-          <Grid item md={8} lg={9}>
+          <Grid item md={8} lg={9} xs={12}>
             {arr.map((item) => (
               <TabPanel key={item.id}>
                 <VideoBox />
