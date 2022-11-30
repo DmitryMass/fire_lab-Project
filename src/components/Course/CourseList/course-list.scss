@@ -1,22 +1,35 @@
 @import '../../../styles/vars.scss';
 
 .course__content {
-  @include flex(center, space-between, nowrap);
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 .content__wrapper {
   @include flex(center, flex-start, nowrap);
   gap: 5px;
 }
 
-.course__title {
+.course__title,
+.course__details {
   @include text(16px, 160%, bold);
   color: $white;
+  @media screen and (max-width: 992px) {
+    @include text(14px, 140%, bold);
+  }
 }
 .course__checkbox {
   @include flex(center, flex-start, nowrap);
   gap: 10px;
   margin-top: 15px;
+  color: $gray-title;
+
+  & > input {
+    width: 15px;
+    height: 15px;
+    &:hover,
+    &:focus {
+      outline: none;
+    }
+  }
 }
 
 .course__icon,
@@ -41,9 +54,8 @@
   padding: 2px 8px;
 }
 
-.react-tabs {
-  display: flex;
-  flex-direction: row-reverse;
+.schedule__wrapper {
+  @include flex(center, space-between, nowrap);
 }
 
 .react-tabs__tab-panel,
@@ -52,15 +64,15 @@
 }
 
 .react-tabs__tab-list {
-  min-width: 300px;
-  padding: 25px;
-  @include flex(stretch, flex-start, nowrap);
-  flex-direction: column;
-  background-color: $gray3-bars;
+  padding: 15px;
+  margin-bottom: 0;
   border-left: 1px solid $gray4-divider;
   border-bottom: 1px solid $gray4-divider;
-  height: calc(100vh - 148px);
-  overflow-y: auto;
+  background-color: $gray3-bars;
+  position: relative;
+  overflow: auto;
+  max-height: calc(100vh - 110px);
+  margin: 0;
 }
 ::-webkit-scrollbar {
   width: 0px;
@@ -75,6 +87,7 @@
   border-radius: 4px;
   margin: 10px 0;
   background-color: $gray1-bgc;
+  width: 81%;
 }
 .react-tabs__tab {
   border: 2px solid $gray4-divider;
@@ -117,4 +130,34 @@
     flex-direction: column;
     align-items: flex-start;
   }
+}
+
+// accordion
+.MuiAccordion-root {
+  margin-top: 20px;
+}
+
+.MuiAccordionSummary-root,
+.MuiAccordionDetails-root {
+  background-color: $gray1-bgc !important;
+  border: 1px solid $gray4-divider !important;
+}
+
+.MuiAccordionDetails-root {
+  padding: 8px 0 !important;
+}
+
+.menuIcon {
+  display: none !important;
+  @media screen and (max-width: 768px) {
+    display: block !important;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color: $white;
+  }
+}
+
+.active {
+  transform: translateX(100%);
 }

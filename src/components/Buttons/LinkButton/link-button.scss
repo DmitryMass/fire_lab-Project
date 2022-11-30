@@ -6,11 +6,16 @@
   @include text(14px, $lh-standart, 700);
   gap: 10px;
   transition: all 0.3s ease;
-  min-width: 180px;
+  width: 180px;
+  max-height: 40px;
   padding: 15px 20px;
+  margin-bottom: 15px;
   &:hover {
     transition: all 0.3s ease;
     @include button($white, $green-dark, 4px);
+  }
+  @media screen and (max-width: 992px) {
+    padding: 8px 10px;
   }
 }
 
@@ -26,5 +31,8 @@
   &:hover {
     @include button($gray1-bgc, $blue-sky, 4px);
     transition: all 0.3s ease-in-out;
+  }
+  @media screen and (max-width: 992px) {
+    padding: 8px 10px;
   }
 }

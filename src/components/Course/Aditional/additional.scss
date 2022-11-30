@@ -3,6 +3,10 @@
 .additional {
   @include flex(stretch, center, nowrap);
   min-height: 120px;
+  &:hover > .additional__desc {
+    transition: all 0.3s linear;
+    background-color: $gray4-divider;
+  }
 }
 
 .additional__obj {

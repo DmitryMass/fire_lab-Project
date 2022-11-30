@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, memo } from 'react';
 import arrow from '../../../assets/icons/arrow-right.svg';
 
 import './additional.scss';
@@ -27,4 +27,4 @@ const Additional: FC<IAdditionalProps> = ({ desc, title, link, obj }) => {
   );
 };
 
-export default Additional;
+export default memo(Additional);
